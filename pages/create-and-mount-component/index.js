@@ -13,6 +13,9 @@ export default function Home() {
         <li>
           <Link href="/create-and-mount-component/three">three</Link>
         </li>
+        <li>
+          <Link href="/create-and-mount-component/four">four</Link>
+        </li>
       </ul>
     </div>
   );

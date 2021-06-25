@@ -9,6 +9,9 @@ export default function Home() {
             Create and mount a new button
           </Link>
         </li>
+        <li>
+          <Link href="/update-variant">Update a variant</Link>
+        </li>
       </ul>
     </div>
   );
