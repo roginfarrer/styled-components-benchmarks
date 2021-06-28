@@ -1,8 +1,8 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
 const CreateAndMountComponent = () => {
   const OneTest = dynamic(
-    () => import("../../benchmarks/update-variant/three"),
+    () => import('../../benchmarks/create-and-mount-component/no-themed'),
     { ssr: false }
   );
 

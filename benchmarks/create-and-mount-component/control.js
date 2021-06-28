@@ -1,8 +1,8 @@
-import React from "react";
-import { TestRunner } from "../TestRunner";
-import Badge from "../../components/Badge/no-theme-or-props";
+import React from 'react';
+import { TestRunner } from '../TestRunner';
+import Badge from '../../components/Badge/control';
 
-const Test = () => {
+const Test = ({ testIndex }) => {
   return <Badge>testing</Badge>;
 };
 

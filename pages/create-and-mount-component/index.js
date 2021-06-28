@@ -1,21 +1,22 @@
-import Link from "next/link";
+import Link from 'next/link';
+
+const links = [
+  'control',
+  'css-syntax',
+  'object-syntax',
+  'no-props',
+  'no-themed',
+];
 
 export default function Home() {
   return (
     <div>
       <ul>
-        <li>
-          <Link href="/create-and-mount-component/one">one</Link>
-        </li>
-        <li>
-          <Link href="/create-and-mount-component/two">two</Link>
-        </li>
-        <li>
-          <Link href="/create-and-mount-component/three">three</Link>
-        </li>
-        <li>
-          <Link href="/create-and-mount-component/four">four</Link>
-        </li>
+        {links.map((link) => (
+          <li key={link}>
+            <Link href={`/create-and-mount-component/${link}`}>{link}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

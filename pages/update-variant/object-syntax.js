@@ -1,9 +1,11 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
 const CreateAndMountComponent = () => {
   const OneTest = dynamic(
-    () => import("../../benchmarks/create-and-mount-component/three"),
-    { ssr: false }
+    () => import('../../benchmarks/update-variant/object-syntax'),
+    {
+      ssr: false,
+    }
   );
 
   return <OneTest />;

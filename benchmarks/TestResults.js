@@ -10,37 +10,37 @@ export const TestResults = ({ testInfo }) => {
   const averageInfo = {
     firstIteration: calculateAverage(
       testInfo.results,
-      "firstIteration",
+      'firstIteration',
       testInfo.numberOfRuns
     ),
     lastIteration: calculateAverage(
       testInfo.results,
-      "lastIteration",
+      'lastIteration',
       testInfo.numberOfRuns
     ),
     fastestIteration: calculateAverage(
       testInfo.results,
-      "fastestIteration",
+      'fastestIteration',
       testInfo.numberOfRuns
     ),
     slowestIteration: calculateAverage(
       testInfo.results,
-      "slowestIteration",
+      'slowestIteration',
       testInfo.numberOfRuns
     ),
     meanIteration: calculateAverage(
       testInfo.results,
-      "meanIteration",
+      'meanIteration',
       testInfo.numberOfRuns
     ),
     medianIteration: calculateAverage(
       testInfo.results,
-      "medianIteration",
+      'medianIteration',
       testInfo.numberOfRuns
     ),
     variance: calculateAverage(
       testInfo.results,
-      "variance",
+      'variance',
       testInfo.numberOfRuns
     ),
   };
@@ -118,6 +118,9 @@ export const TestResults = ({ testInfo }) => {
           causing renders to be wildly different
         </li>
       </ul>
+      <div>
+        <a href="?">Restart test</a>
+      </div>
     </div>
   );
 };
@@ -134,7 +137,7 @@ function ResultCells({ result }) {
   } = result;
 
   const alertLastRender =
-    lastIteration > firstIteration * 1.1 ? { color: "orange" } : undefined;
+    lastIteration > firstIteration * 1.1 ? { color: 'orange' } : undefined;
   return (
     <>
       <td>{firstIteration.toFixed(6)}</td>

@@ -1,21 +1,22 @@
-import Link from "next/link";
+import Link from 'next/link';
+
+const links = [
+  'control',
+  'css-syntax',
+  'object-syntax',
+  'no-props',
+  'no-themed',
+];
 
 export default function Home() {
   return (
     <div>
       <ul>
-        <li>
-          <Link href="/update-variant/one">one</Link>
-        </li>
-        <li>
-          <Link href="/update-variant/two">two</Link>
-        </li>
-        <li>
-          <Link href="/update-variant/three">three</Link>
-        </li>
-        <li>
-          <Link href="/update-variant/four">four</Link>
-        </li>
+        {links.map((link) => (
+          <li key={link}>
+            <Link href={`/update-variant/${link}`}>{link}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

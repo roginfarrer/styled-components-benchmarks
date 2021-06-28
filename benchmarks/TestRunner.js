@@ -1,7 +1,7 @@
-import React, { Profiler, useEffect } from "react";
-import { useRouter } from "next/router";
-import { createId } from "./utils/createId";
-import { TestResults } from "./TestResults";
+import React, { Profiler, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { createId } from './utils/createId';
+import { TestResults } from './TestResults';
 
 /** This component runs a single run of the test, from 0...N */
 const TestAndRefresh = ({ runIndex, testInfo, TestComponent }) => {
@@ -106,10 +106,10 @@ export const TestRunner = ({
   TestComponent,
   /** How many times to run the entire test (to check for variance) */
   numberOfRuns,
-  iterationN,
   /** The N number of iterations to run inside each test */
+  iterationN,
 }) => {
-  if (typeof window === "undefined") {
+  if (typeof window === 'undefined') {
     return null;
   }
 
@@ -129,9 +129,9 @@ export const TestRunner = ({
     localStorage.setItem(newTestId, JSON.stringify(testInfo));
 
     return <a href={`?testId=${newTestId}&runIndex=0`}>start test</a>;
-  } else if (typeof testId === "string") {
+  } else if (typeof testId === 'string') {
     // We are mid-test or finished with a test
-    if (typeof finished !== "undefined") {
+    if (typeof finished !== 'undefined') {
       // Test is done!
       const testInfo = JSON.parse(localStorage.getItem(testId));
 
@@ -140,7 +140,7 @@ export const TestRunner = ({
       // We have a test to run
 
       /** Which sample size are we doing this run? */
-      const runNumber = typeof runIndex === "string" ? Number(runIndex) : 0;
+      const runNumber = typeof runIndex === 'string' ? Number(runIndex) : 0;
       try {
         /** Grab the test info cache from storage */
         const testInfo = JSON.parse(localStorage.getItem(testId));

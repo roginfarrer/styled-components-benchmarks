@@ -1,6 +1,6 @@
 import React from 'react';
 import { TestRunner } from '../TestRunner';
-import Badge from '../../components/Badge/control';
+import Badge from '../../components/Badge/css-syntax';
 
 const Test = ({ testIndex }) => {
   return <Badge>testing</Badge>;
