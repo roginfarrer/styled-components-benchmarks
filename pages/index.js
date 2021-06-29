@@ -23,6 +23,9 @@ export default function Home() {
             nested components architecture
           </Link>
         </li>
+        <li style={{ marginTop: 20 }}>
+          <Link href="/emotion">emotion tests</Link>
+        </li>
       </ul>
     </div>
   );

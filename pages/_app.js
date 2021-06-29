@@ -1,11 +1,14 @@
-import { ThemeProvider } from "styled-components";
-import theme from "../components/utils/theme-one";
+import { ThemeProvider as ScThemeProvider } from 'styled-components';
+import { ThemeProvider as EmThemeProvider } from '@emotion/react';
+import theme from '../components/utils/theme-one';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <ScThemeProvider theme={theme}>
+      <EmThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </EmThemeProvider>
+    </ScThemeProvider>
   );
 }
 
