@@ -13,7 +13,7 @@ const Test = ({ testIndex }) => {
 const StitchesTest = () => {
   return (
     <>
-      <TestRunner numberOfRuns={3} iterationN={1000} TestComponent={Test} />
+      <TestRunner numberOfRuns={3} iterationN={10000} TestComponent={Test} />
 
       <div style={{ opacity: 0, pointerEvents: 'none' }}>
         <Badge>
