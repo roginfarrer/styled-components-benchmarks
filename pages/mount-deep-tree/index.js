@@ -1,6 +1,13 @@
 import Link from 'next/link';
 
-const links = ['control', 'dynamic-props', 'static-styles', 'themed'];
+const links = [
+  'control',
+  'dynamic-props',
+  'dynamic-inline-props',
+  'static-styles',
+  'static-styles-function-syntax',
+  'themed',
+];
 
 export default function Home() {
   return (

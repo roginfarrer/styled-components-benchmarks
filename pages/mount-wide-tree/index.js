@@ -3,6 +3,7 @@ import Link from 'next/link';
 const links = [
   'control',
   'dynamic-props',
+  'dynamic-inline-props',
   'static-styles',
   'static-styles-function-syntax',
   'themed',
